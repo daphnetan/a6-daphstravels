@@ -1,0 +1,135 @@
+body {
+    padding: 3%;
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Work Sans', sans-serif;
+    color: #0137AC;
+}
+
+ul {
+    font-family: 'Work Sans', sans-serif;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#nav {
+    position: fixed; 
+    width:100%;
+}
+
+#nav-wrapper { 
+    width: 100%; 
+    display: inline-block;
+}
+
+#nav ul { 
+    float:right;
+    text-align: justify;
+    line-height:0;
+    margin: 0; 
+}
+
+#nav ul:after {
+    content: '';
+    display: inline-block;
+}
+
+#nav ul li { 
+    display: inline-block; 
+    line-height:100%;
+    font-size:1.2em;
+}
+
+#nav ul li a { 
+    color:rgb(0, 0, 0);
+    display: block; 
+    padding: 15px; 
+    text-decoration: none; 
+}
+
+#about-header {
+    padding-bottom: 10%;
+}
+
+.about-text {
+    padding: 0 0 14% 0;
+}
+
+.places {
+    float: left;
+    background-color: #4A90E2;
+    padding-bottom: inherit;
+    overflow: hidden;
+}
+
+#places-header {
+    padding: 30px;
+}
+
+.places-container {
+    position: relative;
+    
+}
+
+#places-left {
+    float: right;
+}
+
+#lisbon {
+    padding: 10px;
+}
+
+#copenhagen {
+    padding: 10px;
+}
+
+#paris {
+    padding: 10px;
+}
+
+#uk {
+    padding: 10px;
+}
+
+#sevilla {
+    padding: 10px;
+}
+
+#marrakech {
+    padding: 10px;
+}
+
+.faq {
+}
+
+#faq-container {
+
+}
+
+#city-list {
+    display: inline-block;
+}
+
+#first-list {
+    float: left;
+}
+
+#second-list {
+    float: right;
+}
+
+
+.contact {
+    background-color: #417505;
+}
+
+#contact-text p {
+    color: white;
+}
