@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Daphne's Travels</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--jQuery must also be linked for Bootstrap to function-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- handlebars -->
+    <script src="lib/handlebars-v4.0.11.js"></script>
+    <!-- custom JavaScript -->
+    <script src="main.js"></script>
+    <!-- custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <!--header-->
+        <div id="destination-header">
+                <h1>Paris, France</h1>
+        </div>
+    
+    <!--introductory text-->
+    <!--doesn't have a row-->
+    <img class="img-responsive destimg1" src="img/paris1.png">
+    <div class="col-sm-4">
+        <p>In “5 Things,” I’ll ask some of my favorite bloggers in cities all over the country to share insider travel tips on where to eat, shop, stay, and play in their neighborhoods (plus, what to pack to make the adventure complete). This week, Nichole Robertson of Obvious State Studio—and author of the beautiful books, Paris in Color and Paris in Love, and The Paris Journal series—guides us through her favorite city, one outside of the country.
+        </p>
+    </div>
+
+        <!--eat-->
+        <div class="row">
+            <img class="img-responsive destimg2" src="img/paris2.png">
+            <img class="img-responsive destimg3" src="img/paris3.png">
+            <img class="img-responsive destimg4" src="img/paris4.png">
+            <img class="img-responsive eatheader" src="img/eat-header.png">
+            <div class="col-sm-4">
+                <h3>place name 1</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+
+                <h3>place name 2</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+
+                <h3>place name 3</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            </div>
+        </div>
+
+        <!--play-->
+        <div class="row">
+            <img class="img-responsive destimg5" src="img/paris5.png">
+            <img class="img-responsive playheader" src="img/play-header.png">
+            <div class="col-sm-4">
+                <h3>place name 1</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+
+                <h3>place name 2</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+
+                <h3>place name 3</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--stay-->
+    <div class="row">
+            <img class="img-responsive destimg6" src="img/paris6.png">
+            <img class="img-responsive stayheader" src="img/stay-header.png">
+            <div class="col-sm-4">
+                <h3>place name 1</h3>
+                <h4>address goes here <br></br>address continued</h4>
+                <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- 
+    <div id="destination-container">
+        </div>
+        <div id="product-selection-container">
+        </div>
+    
+        <!--TODO (Step 3): add HTML template for product selection here
+        <script id="selection-template" type="text/x-handlebars-template">
+            {{#each placesAway}}
+                <div class="product-selection" id={{ id }}>
+                    <img src={{ img }}>
+                </div>
+            {{/each}}
+        </script>-->
+
+        <!-- TODO (Step 5): add HTML template for product detail here
+        <script id="detail-template" type="text/x-handlebars-template">
+            <div class="destination">
+                <h1 class="product-name">{{name}}</h1>
+                <p class="product-price">{{price}}</p>
+                <img src={{ img }}>
+            </div>
+        </script>  -->
+
+    
+</body>
+</html>
