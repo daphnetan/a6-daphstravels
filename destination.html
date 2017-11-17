@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="index.html">Daph's Travels</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -47,7 +47,7 @@
 
     <!--header-->
         <div id="destination-header">
-                <h1>Paris, France</h1>
+                <h1> {{place}} </h1>
         </div>
     
     <!--introductory text-->
@@ -55,19 +55,11 @@
 
         <div class="row intro">
             <div class="col-sm-8">
-                <img class="img-responsive destimg1" src="img/paris1.png">
+                {{ img1 }}
             </div>
 
             <div class="col-sm-4">
-                <p>Paris I love you love you love youuuuuu; Paris I love you love you love youuuuuu; 
-                    Paris I love you love you love youuuuuu; Paris I love you love you love youuuuuu; 
-                    Paris I love you love you love youuuuuu; Paris I love you love you love youuuuuu; 
-                    Paris I love you love you loveParis I love you love you love youuuuuu; 
-                    Paris I love you love you loveParis I love you love you love youuuuuu; 
-                    Paris I love you love you loveParis I love you love you love youuuuuu; 
-                    Paris I love you love you loveParis I love you love you love youuuuuu; 
-                    Paris I love you love you loveParis I love you love you love youuuuuu; Paris I love you
-                </p>
+                <h4> {{ description }} </h4>
             </div>
         </div>
 
@@ -88,17 +80,17 @@
         
         <div class="col-sm-4">
             <img class="img-responsive eatheader" src="img/eat-header.png">
-            <h3>place name 1</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{eatName1}}  </h3>
+            <h4> {{eatAddress1}} </h4>
+            <p> {{eatComments1}} </p>
 
-            <h3>place name 2</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{eatName2}} </h3>
+            <h4> {{eatAddress2}} </h4>
+            <p> {{eatComments2}} </p>
 
-            <h3>place name 3</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{eatName3}} </h3>
+            <h4> {{eatAddress3}} </h4>
+            <p> {{eatComments3}} </p>
         </div>
     </div>
 
@@ -110,17 +102,17 @@
 
         <div class="col-sm-4">
             <img class="img-responsive playheader" src="img/play-header.png">
-            <h3>place name 1</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{playName1}} </h3>
+            <h4> {{playAddress1}} </h4>
+            <p> {{playComments1}} </p>
 
-            <h3>place name 2</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{playName2}}</h3>
+            <h4> {{playAddress2}} </h4>
+            <p> {{playComments2}} </p>
 
-            <h3>place name 3</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{playName3}}</h3>
+            <h4> {{playAddress3}} </h4>
+            <p> {{playComments3}} </p>
         </div>
     </div>
 
@@ -132,9 +124,9 @@
                 
         <div class="col-sm-4">
             <img class="img-responsive stayheader" src="img/stay-header.png">
-            <h3>place name 1</h3>
-            <h4>address goes here <br></br>address continued</h4>
-            <p>description of the place goes here. description of the place goes here. description of the place goes here.</p>
+            <h3> {{stayName}} </h3>
+            <h4>{{stayAddress}}</h4>
+            <p> {{stayComments}} </p>
         </div>
     </div>
 

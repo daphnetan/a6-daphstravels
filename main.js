@@ -2,26 +2,100 @@
 var destination = {
     "placesAround": [
         {
-            "name": "Paris",
-            "price": "$2.00",
-            "img": "img/paris.png",
-            "id": 0
+            "place": "Paris, France",
+            "id": 0,
+            "description": Paris is one of those cities that is so romanticized, you wonder if it's real. And the thing is, it is. This was one of the first cities abroad I traveled to as an adult, and to this day, this trip is one of my favorites. The culture, food, and areas to explore feel endless. It's this perfect mix of tourist attractions and city living. I spent an entire week there, and it didn't feel like quite enough time. I'd definitely go back again to see the amazing art once more in person, and to run through a city so rich in history.
+            //images
+            "img1": "img/paris1.png",
+            "img2": "img/paris2.png",
+            "img3": "img/paris3.png",
+            "img4": "img/paris4.png",
+            "img5": "img/paris5.png",
+            "img6": "img/paris6.png",
+
+            //eat recommendations
+            "eatName1": "something goes here", 
+            "eatAddress1": "something goes here",
+            "eatComments1": "something goes here",
+
+            "eatName2": "something goes here",
+            "eatAddress2": "something goes here",
+            "eatComments2": "something goes here",
+
+            "eatName3": "something goes here",
+            "eatAddress3": "something goes here",
+            "eatComments3": "something goes here",
+
+            //play recommendations
+            "playName1": "something goes here", 
+            "playAddress1": "something goes here",
+            "playComments1": "something goes here",
+
+            "playName2": "something goes here",
+            "playAddress2": "something goes here",
+            "playComments2": "something goes here",
+
+            "playName3": "something goes here",
+            "playAddress3": "something goes here",
+            "playComments3": "something goes here",
+
+            //stay recommendation
+            "stayName": "something goes here", 
+            "stayAddress": "something goes here",
+            "stayComments": "something goes here"
+        },
+
+        {
+            "place": "Lisbon, Portugal",
+            "id": 1,
+
+            //images
+            "img1": "img/lisbon1.jpeg",
+            "img2": "img/lisbon2.jpeg",
+            "img3": "img/lisbon3.jpeg",
+            "img4": "img/lisbon4.jpeg",
+            "img5": "img/lisbon5.jpeg",
+            "img6": "img/lisbon6.jpeg",
+
+            //eat recommendations
+            "eatName1": "something goes here", 
+            "eatAddress1": "something goes here",
+            "eatComments1": "something goes here",
+
+            "eatName2": "something goes here",
+            "eatAddress2": "something goes here",
+            "eatComments2": "something goes here",
+
+            "eatName3": "something goes here",
+            "eatAddress3": "something goes here",
+            "eatComments3": "something goes here",
+
+            //play recommendations
+            "playName1": "something goes here", 
+            "playAddress1": "something goes here",
+            "playComments1": "something goes here",
+
+            "playName2": "something goes here",
+            "playAddress2": "something goes here",
+            "playComments2": "something goes here",
+
+            "playName3": "something goes here",
+            "playAddress3": "something goes here",
+            "playComments3": "something goes here",
+
+            //stay recommendation
+            "stayName": "something goes here", 
+            "stayAddress": "something goes here",
+            "stayComments": "something goes here"
         },
         {
-            "name": "Lisbon",
-            "price": "$5.00",
-            "img": "img/lisbon.png",
-            "id": 1
-        },
-        {
-            "name": "Copenhagen",
-            "price": "$22.00",
+            "place": "Copenhagen, Denmark",
             "img": "img/copenhagen.jpg",
             "id": 2
         }
     ]
 }
-/* 
+
 $(document).ready(function(){
     // TODO (Step 4): fill in code for changing selection-template here
     
@@ -56,4 +130,3 @@ function updateProductDetail(id) {
   // add the new HTML to the page
   $("#destination-container").html(newHTML);
 }
- */
