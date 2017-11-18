@@ -9,19 +9,18 @@
     <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="lib/jquery.js"></script>
     <!-- handlebars -->
-    <script src="lib/handlebars-v4.0.11.js"></script>
-    <!-- custom JavaScript -->
+    <script src="lib/handlebars-v4.0.11.js"></script> 
+    <!-- custon JavaScript -->
     <script src="main.js"></script>
     <!-- custom CSS -->
     <link href="style.css" rel="stylesheet">
-
 </head>
 
 <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,98 +38,134 @@
                 <li><a href="#">faq's</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
-            </div><!--/.nav-collapse -->
+            </div>
         </div>
-        </nav>
+    </nav> -->
 
 <div class="container-fluid">
 
-    <!--header-->
-        <div id="destination-header">
-                <h1> {{place}} </h1>
-        </div>
-    
-    <!--introductory text-->
-    <!--doesn't have a row-->
-
-        <div class="row intro">
-            <div class="col-sm-8">
-                {{ img1 }}
-            </div>
-
-            <div class="col-sm-4">
-                <h4> {{ description }} </h4>
-            </div>
-        </div>
-
-    <!--eat-->
-    <div class="row eat">
-        <div class="col-md-8">
-            <div class="row">
-                <div class="col-sm-8 col-sm-6">
-                    <img class="img-responsive destimg2" src="img/paris2.png">
-                </div>
-                        
-                <div class="col-sm-8 col-sm-6">
-                    <img class="img-responsive destimg3" src="img/paris3.png">
-                </div>
-            </div>
-                <img class="img-responsive destimg4" src="img/paris4.png">
+    <div class="container-fluid">
+        <div id="product-selection-container">
         </div>
         
-        <div class="col-sm-4">
-            <img class="img-responsive eatheader" src="img/eat-header.png">
-            <h3> {{eatName1}}  </h3>
-            <h4> {{eatAddress1}} </h4>
-            <p> {{eatComments1}} </p>
-
-            <h3> {{eatName2}} </h3>
-            <h4> {{eatAddress2}} </h4>
-            <p> {{eatComments2}} </p>
-
-            <h3> {{eatName3}} </h3>
-            <h4> {{eatAddress3}} </h4>
-            <p> {{eatComments3}} </p>
-        </div>
-    </div>
-
-    <!--play-->
-    <div class="row play">
-        <div class="col-sm-8">
-            <img class="img-responsive destimg5" src="img/paris5.png">
-        </div>
-
-        <div class="col-sm-4">
-            <img class="img-responsive playheader" src="img/play-header.png">
-            <h3> {{playName1}} </h3>
-            <h4> {{playAddress1}} </h4>
-            <p> {{playComments1}} </p>
-
-            <h3> {{playName2}}</h3>
-            <h4> {{playAddress2}} </h4>
-            <p> {{playComments2}} </p>
-
-            <h3> {{playName3}}</h3>
-            <h4> {{playAddress3}} </h4>
-            <p> {{playComments3}} </p>
-        </div>
-    </div>
-
-    <!--stay-->
-    <div class="row stay">
-        <div class="col-sm-8">
-            <img class="img-responsive destimg6" src="img/paris6.png">
-        </div>
-                
-        <div class="col-sm-4">
-            <img class="img-responsive stayheader" src="img/stay-header.png">
-            <h3> {{stayName}} </h3>
-            <h4>{{stayAddress}}</h4>
-            <p> {{stayComments}} </p>
-        </div>
-    </div>
-
-</div>
+        <div id="product-detail-container">
+        </div>    
     
+        <div id="eat-detail-container">
+        </div>
+    
+        <div id="play-detail-container">
+        </div>
+    
+        <div id="stay-detail-container">
+        </div>
+    
+        <div id="otherplaces">
+            
+        </div>
+    
+        <!-- TODO (Step 3): add HTML template for product selection here -->
+        <script id="selection-template" type="text/x-handlebars-template">
+            {{#each desiredPlace}}
+                <div class="product-selection" id={{ id }}>
+                    <ul>
+                        <li>{{name}}</li>
+                    </ul> 
+                </div>
+            {{/each}}
+        </script>
+    
+        <!-- add HTML template for place detail here -->
+        <script id="detail-template" type="text/x-handlebars-template">
+            <div class="row">
+            <div class="product-detail">
+                <h1>{{ name }}</h1>
+                    <div class="col-sm-8">
+                        <img class="img-responsive"src={{ img1 }}>
+                    </div>
+    
+                    <div class="col-sm-4">
+                        <h4>{{ description }}</h4>
+                    </div>
+            </div>
+            </div>
+        </script>
+    
+        <!-- add HTML template for play detail here -->
+        <script id="eat-template" type="text/x-handlebars-template">
+            <div class="row">
+                <div class="eat-detail">
+                    <div class="col-md-8">
+                        <div class="col-sm-8 col-sm-6 col-xs-6"><img class="img-responsive"src={{ img2 }}></div>
+                        <div class="col-sm-8 col-sm-6 col-xs-6"><img class="img-responsive"src={{ img3 }}></div>
+                        <img class="img-responsive"src={{ img4 }}>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/eat-header.png">
+                        <!--eat-->
+                        <h3> {{ eatName1 }} </h3>
+                        <h4> {{eatAddress1}} </h4>
+                        <p> {{eatComments1}} </p>
+            
+                        <h3> {{eatName2}} </h3>
+                        <h4> {{eatAddress2}} </h4>
+                        <p> {{eatComments2}} </p>
+            
+                        <h3> {{eatName3}} </h3>
+                        <h4> {{eatAddress3}} </h4>
+                        <p> {{eatComments3}} </p>
+                    </div>
+                </div>
+            </div>
+        </script>
+    
+        <!-- add HTML template for play detail here -->
+        <script id="play-template" type="text/x-handlebars-template">
+            <div class="row">
+                <div class="play-detail">
+                    <div class="col-sm-8">
+                        <img class="img-responsive"src={{ img5 }}>
+                    </div>
+    
+                    <div class="col-sm-4">
+                        <img class="img-responsive" src="img/play-header.png">
+                        <!--play-->
+                        <h3> {{ playName1 }} </h3>
+                        <h4> {{playAddress1}} </h4>
+                        <p> {{playComments1}} </p>
+            
+                        <h3> {{playName2}} </h3>
+                        <h4> {{playAddress2}} </h4>
+                        <p> {{playComments2}} </p>
+            
+                        <h3> {{playName3}} </h3>
+                        <h4> {{playAddress3}} </h4>
+                        <p> {{playComments3}} </p>
+                    </div>
+                </div>
+            </div>
+        </script>
+    
+        <!-- add HTML template for stay detail here -->
+        <script id="stay-template" type="text/x-handlebars-template">
+            <div class="row">
+                <div class="stay-detail">
+                    <div class="col-sm-8">
+                        <img class="img-responsive"src={{ img6 }}>
+                    </div>
+    
+                    <div class="col-sm-4">
+                        <img class="img-responsive" src="img/stay-header.png">
+                        <!--stay-->
+                        <h3> {{stayName}} </h3>
+                        <h4> {{stayAddress}} </h4>
+                        <p> {{stayComments}} </p>
+                    </div>
+                </div>
+            </div>
+        </script>
+    
+        </div> <!--close container fluid div-->
 </body>
 </html>

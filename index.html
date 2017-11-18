@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Daphne's Travels</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-  <!--jQuery must also be linked for Bootstrap to function
-  <script src="main.js" type="text/javascript"></script>-->
-
-  <!--jQuery must also be linked for Bootstrap to function-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Daphne's Travels</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--jQuery must also be linked for Bootstrap to function-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="lib/jquery.js"></script>
+    <!-- handlebars -->
+    <script src="lib/handlebars-v4.0.11.js"></script> 
+    <!-- custon JavaScript -->
+    <script src="main.js"></script>
+    <!-- custom CSS -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -78,20 +79,31 @@
                 <img class="img-responsive placesheader" src="img/places-header.png">
                 <div class="places-container">
                     <div class="col-sm-6 placesleft">
-                            <img class="img-responsive lisbon" src="img/lisbon.png">
-                            <img class="img-responsive copenhagen" src="img/copenhagen.png">
-                            <img class="img-responsive paris" src="img/paris.png">
+                        <img class="img-responsive paris" onclick="show(0)" src="img/paris.png"/>
+                        <img class="img-responsive sevilla" onclick="show(1)" src="img/sevilla.png">
+                        <img class="img-responsive lisbon" onclick="show(2)" src="img/lisbon.png">
                     </div>
 
                     <div class="col-sm-6 placesright">
-                            <img class="img-responsive uk" src="img/uk.png">
-                            <img class="img-responsive sevilla" src="img/sevilla.png">
-                            <img class="img-responsive marrakech" src="img/marrakech.png">
+                        <img class="img-responsive uk" src="img/uk.png">       
+                        <img class="img-responsive copenhagen" src="img/copenhagen.png">
+                        <img class="img-responsive marrakech" src="img/marrakech.png">
                     </div>
                 <div>
         </div>
     </div>
     </div>
+
+        <!-- TODO (Step 3): add HTML template for product selection here -->
+        <script id="selection-template" type="text/x-handlebars-template">
+            {{#each desiredPlace}}
+                <div class="product-selection" id={{ id }}>
+                    <ul>
+                        <li>{{name}}</li>
+                    </ul> 
+                </div>
+            {{/each}}
+        </script>
 
     <!--Faq -->
     <div class="container-fluid">

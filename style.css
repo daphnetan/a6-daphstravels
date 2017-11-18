@@ -1,5 +1,6 @@
 body {
     padding: 3%;
+    width:100%;
 }
 
 h1 {
@@ -7,6 +8,10 @@ h1 {
 }
 
 h2 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h4 {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -123,10 +128,18 @@ p#hello-details {
 }
 
 /*destination*/
-.intro {
-    display: inline-block;
+.intro img {
+    padding-bottom: 2%;
 }
 
 .eat img {
+    padding-bottom: 2%;
+}
+
+.play {
+    padding-bottom: 2%;
+}
+
+.stay {
     padding-bottom: 2%;
 }
