@@ -171,14 +171,14 @@ var places = {
 }
 
 $(document).ready(function(){
-    // get the HTML template using jQuery
-    var source = $("#selection-template").html();
-    // compile the template into a function
-    var template = Handlebars.compile(source);
-    // create new HTML using our data
-    var newHTML = template(places);
-    // add the new HTML to the page
-    $("#product-selection-container").append(newHTML);
+    // // get the HTML template using jQuery
+    // var source = $("#selection-template").html();
+    // // compile the template into a function
+    // var template = Handlebars.compile(source);
+    // // create new HTML using our data
+    // var newHTML = template(places);
+    // // add the new HTML to the page
+    // $("#product-selection-container").append(newHTML);
 
     // //function call for 1st update to detail-template
     i=Number(localStorage.getItem("idd"));
@@ -188,13 +188,13 @@ $(document).ready(function(){
     updateStayDetail(i);
 
     //change product details on click
-    // $(".product-selection").click(function() {
-    //     var idd = $(this).attr("id");
-    //     updateProductDetail(idd);
-    //     updateEatDetail(idd);
-    //     updatePlayDetail(idd);
-    //     updateStayDetail(idd);
-    // });
+    $(".product-selection").click(function() {
+        var idd = $(this).attr("id");
+        updateProductDetail(idd);
+        updateEatDetail(idd);
+        updatePlayDetail(idd);
+        updateStayDetail(idd);
+    });
 });
 
 //update detail-template based on id
