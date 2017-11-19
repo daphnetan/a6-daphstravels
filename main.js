@@ -1,12 +1,10 @@
-// places objects here
-
-
 //function that passes id from index to destination page
-function show(id){
-    localStorage.setItem("idd",id);
-    window.location.href="destination.html";
+function show(id){ 
+    localStorage.setItem("idd",id); //create variable that stores id 
+    window.location.href="destination.html"; //pass through to the next page
 }
 
+//places object that contains information by place
 var places = {
     "desiredPlace": [
         {
@@ -154,40 +152,62 @@ var places = {
             "name": "Copenhagen, Denmark",
             //id
             "id": 3,
+
+            //images
+            "img": "img/copenhagen.jpg",
+            "img1": "img/copenhagen1.jpg",
+            "img2": "img/copenhagen2.jpg",
+            "img3": "img/copenhagen3.jpg",
+            "img4": "img/copenhagen4.jpg",
+            "img5": "img/copenhagen5.jpg",
+            "img6": "img/copenhagen6.jpg",
         },
 
         {
             "name": "UK + Ireland",
             //id
             "id": 4,
+            "img": "img/uk.png",
+            "img1": "img/uk1.jpg",
+            "img2": "img/uk2.jpg",
+            "img3": "img/uk3.jpg",
+            "img4": "img/uk4.jpg",
+            "img5": "img/uk5.jpg",
+            "img6": "img/uk6.jpg",
         },
 
         {
             "name": "Marrakech, Morocco",
             //id
             "id": 5,
+
+             //images
+             "img": "img/morocco.png",
+             "img1": "img/morocco1.jpg",
+             "img2": "img/morocco2.jpg",
+             "img3": "img/morocco3.jpg",
+             "img4": "img/morocco4.jpg",
+             "img5": "img/morocco5.jpg",
+             "img6": "img/morocco6.jpg",
         },
     ]
 }
 
 $(document).ready(function(){
-    // // get the HTML template using jQuery
-    // var source = $("#selection-template").html();
-    // // compile the template into a function
-    // var template = Handlebars.compile(source);
-    // // create new HTML using our data
-    // var newHTML = template(places);
-    // // add the new HTML to the page
-    // $("#product-selection-container").append(newHTML);
-
-    // //function call for 1st update to detail-template
+    //populate page with destination choice
     i=Number(localStorage.getItem("idd"));
     updateProductDetail(i);
     updateEatDetail(i);
     updatePlayDetail(i);
     updateStayDetail(i);
 
-    //change product details on click
+    // populate other guides "footer"
+    var source = $("#selection-template").html();
+    var template = Handlebars.compile(source);
+    var newHTML = template(places);
+    $("#product-selection-container").append(newHTML);
+
+    //change place details on click in other guides
     $(".product-selection").click(function() {
         var idd = $(this).attr("id");
         updateProductDetail(idd);
@@ -196,6 +216,8 @@ $(document).ready(function(){
         updateStayDetail(idd);
     });
 });
+
+
 
 //update detail-template based on id
 function updateProductDetail(id) {

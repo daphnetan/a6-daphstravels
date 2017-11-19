@@ -4,10 +4,14 @@ body {
 }
 
 h1 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
 
 h2 {
+    font-family: 'Inconsolata', monospace;
+}
+
+h3 {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -28,7 +32,7 @@ p {
     position: relative;
 }
 
-/**
+
 h3#banner-text {
     font-family: 'Work Sans', sans-serif;
     font-size: 5em;
@@ -38,7 +42,7 @@ p#banner-text  {
     font-family: 'Work Sans', sans-serif;
     font-size: 2em;
 }
-*/
+
 
 .jumbotron {
     background-image: url("img/banner-budapest.png");
@@ -127,19 +131,43 @@ p#hello-details {
     color: white;
 }
 
-/*destination*/
-.intro img {
+/*destination page*/
+
+/*temporary code*/
+.product-detail h1 {
+    font-size: 3 em;
+}
+/* div.col-sm-8:nth-child(1){
+    width: 50%;
+    background-color: rgb(0,255,0);
+}
+
+div.col-xs-6:nth-child(2){
+    background-color: rgb(255,0,0);
+} */
+
+.product-detail h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+.product-detail img {
     padding-bottom: 2%;
 }
 
-.eat img {
+.eat-detail img {
     padding-bottom: 2%;
 }
 
-.play {
+.play-detail img {
     padding-bottom: 2%;
 }
 
-.stay {
-    padding-bottom: 2%;
+.stay-detail img {
+    padding-bottom: 5%;
+}
+
+/* other places */
+h2 {
+    text-align: center;
 }
