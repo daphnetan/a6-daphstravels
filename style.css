@@ -3,108 +3,162 @@ body {
     width:100%;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Inconsolata', monospace;
 }
 
-h2 {
-    font-family: 'Inconsolata', monospace;
-}
-
-h3 {
+h3, h4, ul, p {
     font-family: 'Work Sans', sans-serif;
 }
 
-h4 {
-    font-family: 'Work Sans', sans-serif;
+/**nav bar**/
+.navbar{
+    background-color: white;
+    border: transparent;
 }
 
-ul {
-    font-family: 'Work Sans', sans-serif;
+.navbar-brand {
+    padding: 0px;
 }
 
-p {
-    font-family: 'Work Sans', sans-serif;
+.navbar-brand>img {
+    height: 100%;
+    width: auto;
 }
 
-/*banner*/
-.thumbnail{
-    position: relative;
+.navbar-nav > li > a {
+    color: black;
 }
 
-
-h3#banner-text {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 5em;
-}
-
-p#banner-text  {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 2em;
-}
-
-
-.jumbotron {
-    background-image: url("img/banner-budapest.png");
-    background-size: cover;
-    background-position: center;
+.navbar-fixed-top {
+    padding: 2%;
 }
 
 /*about*/
+.about-section img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 2%;
+}
+
 .aboutheader {
-    padding: 0 3% 3% 3%; 
+    margin: 6% 0 3% 0; 
+}
+
+.about-section {
+    margin-bottom: 5%;
+}
+
+#profileimage:hover {
+    animation: bounce 2.5s; 
+    -webkit-animation: bounce 2.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 /*places*/
-.places {
+#places {
     float: left;
     padding-bottom: 5%;
-    background-color: #4A90E2;
+    background-color: #4A78E2;
     width: 100%;
 }
 
 .placesheader {
     padding: 3% 3% 0 3%; 
+
 }
 
 .places-container {
     padding: 5%;
-
 }
 
 /*cities*/
-.lisbon {
-    padding-bottom: 3%;
-}
-
-.copenhagen {
-    padding-bottom: 3%;
-}
-
 .paris {
     padding-bottom: 3%;
 }
 
-.uk {
-    padding-bottom: 3%;
+.paris:hover {
+    opacity:0.5;
+    transition: .5s ease;
+    animation: pulse .8s; 
+    -webkit-animation: pulse .8s;
 }
 
 .sevilla {
     padding-bottom: 3%;
+    transition: .5s ease;
+}
+
+.sevilla:hover {
+    opacity:0.5;
+    transition: .5s ease;
+    animation: pulse .8s; 
+    -webkit-animation: pulse .8s;
+}
+
+.lisbon {
+    padding-bottom: 3%;
+    transition: .5s ease;
+}
+
+.lisbon:hover {
+    opacity:0.5;
+    transition: .5s ease;
+    animation: pulse .8s; 
+    -webkit-animation: pulse .8s;
+}
+
+.copenhagen {
+    padding-bottom: 3%;
+    transition: .5s ease;
+}
+
+.copenhagen:hover {
+    opacity: 0.5;
+    transition: .5s ease;
+    animation: pulse .8s; 
+    -webkit-animation: pulse .8s;
+}
+
+.uk {
+    padding-bottom: 3%;
+    transition: .5s ease;
+}
+
+.uk:hover {
+    opacity:0.5;
+    transition: .5s ease;
+    animation: pulse .8s; 
+    -webkit-animation: pulse .8s;
 }
 
 .marrakech {
     padding-bottom: 3%;
+    transition: .5s ease;
+}
+
+.marrakech:hover {
+    opacity:0.5;
+    transition: .5s ease;
+    animation: pulse .8s; 
+    -webkit-animation: pulse .8s;
 }
 
 /*FAQ*/
-.faq h3 {
-    color: #4A90E2;
-    font-family: 'Ubuntu', sans-serif;
+#faqs h3 {
+    margin-top: 0;
+}
+
+#faqs h3:hover {
+    color: #F5A623;
+    text-decoration: underline;
 }
 
 .faqheader{
-    padding: 3% 3% 0 2%; 
+    padding: 3% 0 3% 2%;
 }
 
 #city-list {
@@ -120,33 +174,27 @@ p#banner-text  {
 }
 
 /*contact*/
-.contact-container {
+#contact {
     padding-bottom: 2%;
-    background-color: #417505;
+    background-color: #4BBB8E;
     padding: 2% 0 0 0;
     width: 100%;
 }
 
-p#hello-details {
-    color: white;
+.contactheader {
+    padding: 3% 0 0 2%;
 }
 
+#contactdetails {
+    margin-top: 5%;
+    padding-left: 2%;
+}
+
+.insta {
+    margin: 2% 2% 5% 0;
+}
 /*destination page*/
-
-/*temporary code*/
 .product-detail h1 {
-    font-size: 3 em;
-}
-/* div.col-sm-8:nth-child(1){
-    width: 50%;
-    background-color: rgb(0,255,0);
-}
-
-div.col-xs-6:nth-child(2){
-    background-color: rgb(255,0,0);
-} */
-
-.product-detail h1{
     text-align: center;
     font-size: 3em;
 }
@@ -168,6 +216,15 @@ div.col-xs-6:nth-child(2){
 }
 
 /* other places */
-h2 {
+#product-selection-container h2 {
     text-align: center;
 }
+
+#product-selection-container p:hover {
+    color: #F5A623;
+    text-decoration: underline;
+    animation: bounceIn 1s; 
+    -webkit-animation: bounceIn 1s;
+}
+
+

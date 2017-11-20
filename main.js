@@ -194,6 +194,19 @@ var places = {
 }
 
 $(document).ready(function(){
+    //scroll to div on click in nav bar
+    $('ul.nav').find('a').click(function(){
+        var $href = $(this).attr('href');
+        var $anchor = $('#'+$href).offset();
+        $('body').animate({ scrollTop: $anchor.top });
+        return false;
+    });
+
+    //animation for profile image in about section
+    $('#profileimage').each(function() {
+        animationHover(this, 'bounce');
+    });
+
     //populate page with destination choice
     i=Number(localStorage.getItem("idd"));
     updateProductDetail(i);
@@ -209,12 +222,15 @@ $(document).ready(function(){
 
     //change place details on click in other guides
     $(".product-selection").click(function() {
+        $(window).scrollTop(0);
         var idd = $(this).attr("id");
         updateProductDetail(idd);
         updateEatDetail(idd);
         updatePlayDetail(idd);
         updateStayDetail(idd);
     });
+
+
 });
 
 

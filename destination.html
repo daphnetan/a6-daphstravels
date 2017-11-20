@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Daphne's Travels</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--jQuery must also be linked for Bootstrap to function-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- jQuery -->
-    <script src="lib/jquery.js"></script>
-    <!-- handlebars -->
-    <script src="lib/handlebars-v4.0.11.js"></script> 
-    <!-- custon JavaScript -->
-    <script src="main.js"></script>
-    <!-- custom CSS -->
-    <link href="style.css" rel="stylesheet">
+        <title>Daphne's Travels</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!--jQuery must also be linked for Bootstrap to function-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+        <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+        <!-- jQuery -->
+        <script src="lib/jquery.js"></script>
+    
+        <!-- handlebars -->
+        <script src="lib/handlebars-v4.0.11.js"></script> 
+    
+        <!-- custom JavaScript -->
+        <script src="main.js"></script>
+    
+        <!-- custom CSS -->
+        <link href="style.css" rel="stylesheet">
+    
+        <!--animation CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
 <body>
-<div class="container-fluid">
+     <!-- Navigation bar-->
+     <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html"><img class="img-responsive" src="img/logo.png"></a>
+            </div>
+        
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="index.html#places">places</a></li>
+                <li><a href="index.html#faqs">faq's</a></li>
+                <li><a href="index.html#contact">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container-fluid">
 
@@ -66,7 +97,7 @@
                     </div>
     
                     <div class="col-lg-4">
-                        <img class="img-responsive" src="img/eat-header.png">
+                        <img id="chosen-eatheader" class="img-responsive" src="img/eat-header.png">
                         <!--eat-->
                         <h3> {{ eatName1 }} </h3>
                         <h4> {{eatAddress1}} </h4>
@@ -93,7 +124,7 @@
                     </div>
     
                     <div class="col-md-4">
-                        <img class="img-responsive" src="img/play-header.png">
+                        <img id="chosen-playheader" class="img-responsive" src="img/play-header.png">
                         <!--play-->
                         <h3> {{ playName1 }} </h3>
                         <h4> {{playAddress1}} </h4>
@@ -120,7 +151,7 @@
                     </div>
     
                     <div class="col-md-4">
-                        <img class="img-responsive" src="img/stay-header.png">
+                        <img id="chosen-stayheader" class="img-responsive" src="img/stay-header.png">
                         <!--stay-->
                         <h3> {{stayName}} </h3>
                         <h4> {{stayAddress}} </h4>
