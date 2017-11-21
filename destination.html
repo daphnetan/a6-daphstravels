@@ -30,30 +30,30 @@
 </head>
 
 <body>
-     <!-- Navigation bar-->
-     <nav class="navbar">
+   <!-- Navigation bar-->
+   <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
                 </button>
                 <a class="navbar-brand" href="index.html"><img class="img-responsive" src="img/logo.png"></a>
             </div>
-        
+
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#places">places</a></li>
-                <li><a href="index.html#faqs">faq's</a></li>
-                <li><a href="index.html#contact">contact</a></li>
+                    <li class="active"><a href="index.html#about">about</a></li>
+                    <li><a href="index.html#places">places</a></li>
+                    <li><a href="index.html#faqs">faq's</a></li>
+                    <li><a href="index.html#contact">contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="chosen-destination">
 
         <div id="product-detail-container">
         </div>    
@@ -91,9 +91,9 @@
             <div class="row">
                 <div class="eat-detail">
                     <div class="col-lg-8">
-                        <div class="col-sm-6 col-xs-6"><img class="img-responsive" src={{ img2 }}></div>
-                        <div class="col-sm-6 col-xs-6"><img class="img-responsive" src={{ img3 }}></div>
-                        <img class="img-responsive" src={{ img4 }}>
+                        <div class="col-sm-6 col-xs-6 img2"><img class="img-responsive" id="img2" src={{ img2 }}></div>
+                        <div class="col-sm-6 col-xs-6 img3"><img class="img-responsive" id="img3" src={{ img3 }}></div>
+                        <img class="img-responsive" id="img4" src={{ img4 }}>
                     </div>
     
                     <div class="col-lg-4">

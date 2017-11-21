@@ -1,8 +1,25 @@
-body {
-    padding: 3%;
-    width:100%;
+/* *page transitions*/
+@keyframe myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
+@-webkit-keyframes myfadeInAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* body and columns*/
+body {
+    width:100%;
+    animation: myfadeInAnimation 2.5s;
+}
+
+.col-sm-6 {
+    padding: 0;
+}
+
+/* headers */
 h1, h2 {
     font-family: 'Inconsolata', monospace;
 }
@@ -13,7 +30,7 @@ h3, h4, ul, p {
 
 /**nav bar**/
 .navbar{
-    background-color: white;
+    background: rgba(255, 255, 255, .5);
     border: transparent;
 }
 
@@ -30,25 +47,39 @@ h3, h4, ul, p {
     color: black;
 }
 
+.navbar-nav > li > a:hover {
+    color: #F5A623;
+    text-decoration: underline;
+}
+
 .navbar-fixed-top {
     padding: 2%;
 }
 
+.collapse li {
+    color: black;
+}
+
+.navbar .navbar-toggle .icon-bar {
+    background-color:black;
+}
+
+.navbar-right {
+    text-align: right;
+}
+
 /*about*/
-.about-section img {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding: 2%;
-}
-
 .aboutheader {
-    margin: 6% 0 3% 0; 
+    margin: 9% 3% 3% 2%;   
 }
 
-.about-section {
-    margin-bottom: 5%;
+.about-body {
+    margin-left: 3%;
+}
+
+#profileimage {
+    width: 50%;
+    margin-bottom: 10%;
 }
 
 #profileimage:hover {
@@ -67,12 +98,13 @@ h3, h4, ul, p {
 }
 
 .placesheader {
-    padding: 3% 3% 0 3%; 
+    padding: 3% 3% 0 2%; 
 
 }
 
 .places-container {
-    padding: 5%;
+    margin-left: 10%;
+    margin-top: 3%;
 }
 
 /*cities*/
@@ -148,8 +180,13 @@ h3, h4, ul, p {
 }
 
 /*FAQ*/
+#faqs {
+    margin-bottom: 3%;
+}
+
 #faqs h3 {
     margin-top: 0;
+    margin-left: 10%;
 }
 
 #faqs h3:hover {
@@ -171,6 +208,7 @@ h3, h4, ul, p {
 
 #second-list {
     float: right;
+    margin:0;
 }
 
 /*contact*/
@@ -182,7 +220,7 @@ h3, h4, ul, p {
 }
 
 .contactheader {
-    padding: 3% 0 0 2%;
+    padding: 3% 0 0 5%;
 }
 
 #contactdetails {
@@ -190,10 +228,23 @@ h3, h4, ul, p {
     padding-left: 2%;
 }
 
+#contactdetails a {
+    color:white;
+}
+
+#contactdetails a:hover {
+    color:#F5A623;
+    text-decoration: underline;
+}
+
 .insta {
     margin: 2% 2% 5% 0;
 }
 /*destination page*/
+#chosen-destination{
+    margin-top: 10%;
+}
+
 .product-detail h1 {
     text-align: center;
     font-size: 3em;
@@ -203,16 +254,28 @@ h3, h4, ul, p {
     padding-bottom: 2%;
 }
 
-.eat-detail img {
-    padding-bottom: 2%;
-}
-
 .play-detail img {
     padding-bottom: 2%;
 }
 
 .stay-detail img {
     padding-bottom: 5%;
+}
+
+.imgpairs {
+    display: inline-block;
+}
+
+#img2 {
+    padding-bottom: 4%;
+}
+
+#img3 {
+    padding-bottom: 4%;
+}
+
+#img4 {
+    padding-bottom: 2%;
 }
 
 /* other places */
@@ -226,5 +289,3 @@ h3, h4, ul, p {
     animation: bounceIn 1s; 
     -webkit-animation: bounceIn 1s;
 }
-
-

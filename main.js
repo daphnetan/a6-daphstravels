@@ -1,6 +1,6 @@
 //function that passes id from index to destination page
-function show(id){ 
-    localStorage.setItem("idd",id); //create variable that stores id 
+function show(id) { 
+    localStorage.setItem("idd",JSON.stringify(id)); //create variable that stores id 
     window.location.href="destination.html"; //pass through to the next page
 }
 
@@ -194,21 +194,8 @@ var places = {
 }
 
 $(document).ready(function(){
-    //scroll to div on click in nav bar
-    $('ul.nav').find('a').click(function(){
-        var $href = $(this).attr('href');
-        var $anchor = $('#'+$href).offset();
-        $('body').animate({ scrollTop: $anchor.top });
-        return false;
-    });
-
-    //animation for profile image in about section
-    $('#profileimage').each(function() {
-        animationHover(this, 'bounce');
-    });
-
     //populate page with destination choice
-    i=Number(localStorage.getItem("idd"));
+    var i=JSON.parse(localStorage.getItem("idd"));
     updateProductDetail(i);
     updateEatDetail(i);
     updatePlayDetail(i);
@@ -224,16 +211,12 @@ $(document).ready(function(){
     $(".product-selection").click(function() {
         $(window).scrollTop(0);
         var idd = $(this).attr("id");
-        updateProductDetail(idd);
+        updateProductDetail(idd);       
         updateEatDetail(idd);
         updatePlayDetail(idd);
         updateStayDetail(idd);
     });
-
-
 });
-
-
 
 //update detail-template based on id
 function updateProductDetail(id) {
@@ -282,4 +265,5 @@ function updateStayDetail(id) {
     // add the new HTML to the page
     $("#stay-detail-container").html(newHTML);
 }
+
 
