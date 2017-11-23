@@ -279,6 +279,10 @@ h3, h4, ul, p {
 }
 
 /* other places */
+#product-selection-container {
+    margin-bottom: 5%;
+}
+
 #product-selection-container h2 {
     text-align: center;
 }
