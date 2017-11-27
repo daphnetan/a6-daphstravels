@@ -1,4 +1,4 @@
-/* *page transitions*/
+/*page transitions*/
 @keyframe myfadeInAnimation {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -7,6 +7,15 @@
 @-webkit-keyframes myfadeInAnimation {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+/*mobile view*/
+@media (max-width: 978px) {
+
+    body {
+      padding-top: 10%; /*shift content down to account for fixed navigation in mobile view*/
+    }
+
 }
 
 /* body and columns*/
@@ -69,6 +78,10 @@ h3, h4, ul, p {
 }
 
 /*about*/
+#about {
+    margin-bottom: 3%;
+}
+
 .aboutheader {
     margin: 9% 3% 3% 2%;   
 }
@@ -79,6 +92,7 @@ h3, h4, ul, p {
 
 #profileimage {
     width: 50%;
+    margin-left: 30%;
     margin-bottom: 10%;
 }
 
@@ -112,9 +126,10 @@ h3, h4, ul, p {
     padding-bottom: 3%;
 }
 
+/*animations for each city when mouse hovers*/
 .paris:hover {
     opacity:0.5;
-    transition: .5s ease;
+    transition: .5s ease; 
     animation: pulse .8s; 
     -webkit-animation: pulse .8s;
 }
@@ -180,13 +195,12 @@ h3, h4, ul, p {
 }
 
 /*FAQ*/
-#faqs {
-    margin-bottom: 3%;
+.questions-container {
+    margin: 3%;
 }
 
 #faqs h3 {
     margin-top: 0;
-    margin-left: 10%;
 }
 
 #faqs h3:hover {
@@ -195,7 +209,7 @@ h3, h4, ul, p {
 }
 
 .faqheader{
-    padding: 3% 0 3% 2%;
+    padding: 3% 0 0 2%;
 }
 
 #city-list {
@@ -287,6 +301,7 @@ h3, h4, ul, p {
     text-align: center;
 }
 
+/* animation for destination selection on hover */
 #product-selection-container p:hover {
     color: #F5A623;
     text-decoration: underline;
