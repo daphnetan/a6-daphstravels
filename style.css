@@ -13,9 +13,8 @@
 @media (max-width: 978px) {
 
     body {
-      padding-top: 10%; /*shift content down to account for fixed navigation in mobile view*/
+        padding-top: 10%; /*shift content down to account for fixed navigation in mobile view*/
     }
-
 }
 
 /* body and columns*/
@@ -208,6 +207,10 @@ h3, h4, ul, p {
     text-decoration: underline;
 }
 
+#faqs p:hover {
+    text-decoration: underline;
+}
+
 .faqheader{
     padding: 3% 0 0 2%;
 }
@@ -227,14 +230,9 @@ h3, h4, ul, p {
 
 /*contact*/
 #contact {
-    padding-bottom: 2%;
     background-color: #4BBB8E;
-    padding: 2% 0 0 0;
+    padding: 2% 0px 3% 2.5%;
     width: 100%;
-}
-
-.contactheader {
-    padding: 3% 0 0 5%;
 }
 
 #contactdetails {
@@ -254,6 +252,7 @@ h3, h4, ul, p {
 .insta {
     margin: 2% 2% 5% 0;
 }
+
 /*destination page*/
 #chosen-destination{
     margin-top: 10%;
